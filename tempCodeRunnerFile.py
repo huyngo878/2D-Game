@@ -1,2 +1,2 @@
 
-        char1.x += VELOCITY
+print("Waiting for user connection")

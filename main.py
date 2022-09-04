@@ -9,7 +9,7 @@ WIDTH, HEIGHT = 900, 600
 DISPLAY = pygame.display.set_mode((WIDTH, HEIGHT))
 ##rename the application
 pygame.display.set_caption("2Dgame")
-#hello
+
 ##Global frames per second
 FPS = 60
 CHAR_H, CHAR_W = 20, 17

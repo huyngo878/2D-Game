@@ -1,5 +1,6 @@
 import pygame
 import os
+from network import Network
 ##using the class "Network" from the file network.py
 # from network import Network
 
@@ -50,8 +51,6 @@ class Player(pygame.sprite.Sprite):
         self.rect.x = self.rect.x + self.movex
         self.rect.y = self.rect.y + self.movey
         
-        if self.movex < 0:
-            self.image = pygame.transform.flip(self.image, True, False)
 
 
 def drawDisplay(DISPLAY):

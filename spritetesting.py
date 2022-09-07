@@ -4,7 +4,7 @@ from network import Network
 ##using the class "Network" from the file network.py
 # from network import Network
 
-ani = 6 #animation cycles
+ani = 10 #animation cycles
 FPS = 60
 ALPHA = 0
 WIDTH = 800
@@ -29,8 +29,8 @@ class Player(pygame.sprite.Sprite):
         super().__init__()
        
         self.images = []
-        for i in range ( 1, 2):
-            img = pygame.image.load(os.path.join('maps','Hobbit - attack' + str(i) + '.png')).convert() #takes in image and places it into array
+        for i in range ( 1, 10):
+            img = pygame.image.load(os.path.join('maps','Hobbit - run' + str(i) + '.png')).convert() #takes in image and places it into array
             self.images.append(img)
             img.convert_alpha()
             img.set_colorkey(ALPHA)
@@ -39,7 +39,7 @@ class Player(pygame.sprite.Sprite):
             self.rect.center = [pos_x,pos_y]
         self.movex = 0 # move along X
         self.movey = 0 # move along Y
-        self.frame = 40 # count frames
+        self.frame = 0 # count frames
 
     def control(self,x, y):
         #player movement
@@ -50,6 +50,20 @@ class Player(pygame.sprite.Sprite):
         #updates position of sprite
         self.rect.x = self.rect.x + self.movex
         self.rect.y = self.rect.y + self.movey
+
+        # moving left (face left and animates through the array while flipping image)
+        if self.movex < 0:
+            self.frame += 1
+            if self.frame > 6*ani:
+                self.frame = 0
+            self.image = pygame.transform.flip(self.images[self.frame // ani], True, False)
+
+        # moving right (doesnt flip image and goes through the animation while moving)
+        if self.movex > 0:
+            self.frame += 1
+            if self.frame > 6*ani:
+                self.frame = 0
+            self.image = self.images[self.frame//ani]
         
 
 
@@ -68,7 +82,7 @@ def main():
     
     player_group = pygame.sprite.Group()
     player_group.add(c)
-    steps = 5
+    steps = 3
  
 
     clock = pygame.time.Clock()

@@ -71,13 +71,16 @@ class Player():
         keys_pressed = pygame.key.get_pressed()
         if keys_pressed[pygame.K_a]: ## and self.x - VELOCITY > - 25: ##left
             self.x -= VELOCITY
+            player.animate()
         if keys_pressed[pygame.K_d]: ## and self.x + VELOCITY + self.width< WIDTH - 20: ##right
             self.x += VELOCITY
             player.animate()
         if keys_pressed[pygame.K_w]: ## and self.y - VELOCITY > - 25: ##up
             self.y -= VELOCITY
+            player.animate()
         if keys_pressed[pygame.K_s]: ##and self.y + VELOCITY + self.height < HEIGHT - 20: ##down
             self.y += VELOCITY
+            player.animate()
         self.update()
 
     def update(self):

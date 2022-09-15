@@ -1,4 +1,5 @@
 from settings import *
+from level import Level
 
 class Game:
     def __init__(self):
@@ -8,6 +9,8 @@ class Game:
         self.screen = pygame.display.set_mode((WIDTH, HEIGHT))
         self.clock = pygame.time.Clock()
 
+        self.level = Level()
+
     def run(self):
         while True:
             for event in pygame.event.get():
@@ -15,6 +18,7 @@ class Game:
                     pygame.quit()
                     sys.exit()
             DISPLAY.blit(MAP_IMAGE, (-50, 0))
+            self.level.run()
             pygame.display.update()
             self.clock.tick(FPS)
 

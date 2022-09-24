@@ -1,10 +1,11 @@
+import pygame, sys
 from settings import *
 from level import Level
 
 class Game:
     def __init__(self):
 
-        #general setup
+        #Game Initization
         pygame.init()
         self.screen = pygame.display.set_mode((WIDTH, HEIGHT))
         self.clock = pygame.time.Clock()
@@ -17,7 +18,7 @@ class Game:
                 if event.type == pygame.QUIT:
                     pygame.quit()
                     sys.exit()
-            DISPLAY.blit(MAP_IMAGE, (-50, 0))
+
             self.level.run()
             pygame.display.update()
             self.clock.tick(FPS)

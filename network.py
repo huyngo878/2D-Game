@@ -1,4 +1,4 @@
- import socket
+import socket
 
 class Network:
     def __init__(self):

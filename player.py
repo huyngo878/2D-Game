@@ -6,12 +6,9 @@ class Player(pygame.sprite.Sprite):
     def __init__(self, pos, group):
         super().__init__(group)
 
-        #self.import_assets()
-        self.status = 'down_idle'
-        self.frame_index = 0
-
         # Window Setup
-        self.image = self.animations[self.status][self.frame_index]
+        self.image = pygame.Surface((16, 32))
+        self.image.fill('green')
         self.rect = self.image.get_rect(center = pos)
 
         # Movement Setup (Direction, Speed, etc.)
@@ -20,12 +17,28 @@ class Player(pygame.sprite.Sprite):
         self.speed = 450 #Speed of the Player
 
     def import_assets(self):
-        self.animations = {'up': [], 'down': [], 'left': [], 'right': [], 
-                           'right_idle':[], 'left_idle': [], 'up_idle': [], 'down_idle': []}
+        self.animations = {}
 
-        for animation in self.animations.keys():
-            full_path = '../graphics/npcs/NPC 01_idle.png' + animation
-            self.animations[animation] = import_folder(full_path)
+        # #self.import_assets()
+        # self.status = 'down_idle'
+        # self.frame_index = 0
+
+        # # Window Setup
+        # self.image = self.animations[self.status][self.frame_index]
+        # self.rect = self.image.get_rect(center = pos)
+
+        # # Movement Setup (Direction, Speed, etc.)
+        # self.direction = pygame.math.Vector2() # Default value for Vector2 is (0, 0)
+        # self.pos = pygame.math.Vector2(self.rect.center) #Sets the position of the player to be the center
+        # self.speed = 450 #Speed of the Player
+
+    # def import_assets(self):
+    #     self.animations = {'up': [], 'down': [], 'left': [], 'right': [], 
+    #                        'right_idle':[], 'left_idle': [], 'up_idle': [], 'down_idle': []}
+
+    #     for animation in self.animations.keys():
+    #         full_path = '../graphics/NPCs/NPC 01_idle (16x24).png' + animation
+    #         self.animations[animation] = import_folder(full_path)
 
     def input(self):
         keys = pygame.key.get_pressed()

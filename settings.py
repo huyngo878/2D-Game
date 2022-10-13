@@ -1,0 +1,9 @@
+
+ani = 10 #animation cycles
+FPS = 60
+ALPHA = 0
+WIDTH = 800
+HEIGHT = 600
+VELOCITY = 3
+BULLET_VELOCITY = 6
+GUN_BULLET = 16

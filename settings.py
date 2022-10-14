@@ -1,9 +1,26 @@
+from pygame.math import Vector2
 
-ani = 10 #animation cycles
-FPS = 60
+#Screen Variables
+SCREEN_WIDTH = 1200
+SCREEN_HEIGHT = 600
+TILE_SIZE = 16
 ALPHA = 0
-WIDTH = 800
-HEIGHT = 600
-VELOCITY = 3
-BULLET_VELOCITY = 6
-GUN_BULLET = 16
+
+#OVERLAY POSITIONS
+OVERLAY_POSITIONS = {
+        'tool' : (40, SCREEN_HEIGHT - 15),
+        'seed' : (70, SCREEN_HEIGHT - 5)}
+
+PLAYER_TOOL_OFFSET = {
+        'left'  : Vector2(-50, 40),
+        'right' : Vector2(50, 40),
+        'up'    : Vector2(0, -10),
+        'down'  : Vector2(0, 50)
+        }
+
+LAYERS = {
+        'water'     : 0,
+        'ground'    : 1
+        }
+
+

@@ -1,45 +1,112 @@
-import pygame, os
+import pygame
+from support import *
 from settings import *
+from spritesheet import Spritesheet
+
 
 class Player(pygame.sprite.Sprite):
-    def __init__(self, pos_x, pos_y, width, height, color):
-        super().__init__()
+    def __init__(self, pos, group):
+        super().__init__(group)
+
        
-        self.images = []
-        for i in range ( 1, 10):
-            #takes in image and places it into array
-            img = pygame.image.load(os.path.join('maps','Hobbit - run' + str(i) + '.png')).convert() 
-            self.images.append(img)
-            img.convert_alpha()
-            img.set_colorkey(ALPHA)
-            self.image = self.images[0]
-            self.rect = self.image.get_rect()
-            self.rect.center = [pos_x,pos_y]
+        self.status = 'down'
+        self.frame_index = 0
+        #uses direction as index for us to organize the files for the animations
+        self.animations = {'up': [], 'down': [], 'left': [], 'right': [], 
+                            'right_idle':[], 'left_idle': [], 'up_idle': [], 'down_idle': []}
 
-        self.movex = 0 # move along X
-        self.movey = 0 # move along Y
-        self.frame = 0 # count frames
+        sprite_sheet = Spritesheet("walkingss.png")
 
-    def control(self,x, y):
-        #player movement
-        self.movex += x
-        self.movey += y
+        index = 0
+        #adds down facing animation sprites 
+        for x in range(4):
+            image = sprite_sheet.get_image(index,0,14,16)
+            self.animations['down'].append(image)
+            index = index + 14
+        #adds left facing animation sprites
+        for x in range(4):
+            image = sprite_sheet.get_image(index,0,14,16)
+            self.animations['left'].append(image)
+            index = index + 14
+        #adds right facing animation sprites
+        for x in range(4):
+            image = sprite_sheet.get_image(index,0,14,16)
+            self.animations['right'].append(image)
+            index = index + 14
+        #adds up facing animation sprites
+        for x in range(4):
+            image = sprite_sheet.get_image(index,0,14,16)
+            self.animations['up'].append(image)
+            index = index + 14
 
-    def update(self):
-        #updates position of sprite
-        self.rect.x = self.rect.x + self.movex
-        self.rect.y = self.rect.y + self.movey
+        # Window Setup
+        self.image = self.animations[self.status][self.frame_index]
+        self.rect = self.image.get_rect(center = pos)
 
-        # moving left (face left and animates through the array while flipping image)
-        if self.movex < 0:
-            self.frame += 1
-            if self.frame > 6*ani:
-                self.frame = 0
-            self.image = pygame.transform.flip(self.images[self.frame // ani], True, False)
+        # Movement Setup (Direction, Speed, etc.)
+        self.direction = pygame.math.Vector2() # Default value for Vector2 is (0, 0)
+        self.pos = pygame.math.Vector2(self.rect.center) #Sets the position of the player to be the center
+        self.speed = 300 #Speed of the Player
 
-        # moving right (doesnt flip image and goes through the animation while moving)
-        if self.movex > 0:
-            self.frame += 1
-            if self.frame > 6*ani:
-                self.frame = 0
-            self.image = self.images[self.frame//ani]
+
+    def input(self):
+        keys = pygame.key.get_pressed()
+
+        if keys[pygame.K_w]:
+            self.direction.y = -1
+            self.status = 'up'
+        elif keys[pygame.K_s]:
+            self.direction.y = 1
+            self.status = 'down'
+        else:
+            self.direction.y = 0
+
+
+
+        if keys[pygame.K_d]:
+            self.direction.x = 1
+            self.status = 'right'
+        elif keys[pygame.K_a]:
+            self.direction.x = -1
+            self.status = 'left'
+        else:
+            self.direction.x = 0
+
+    def move(self, dt):
+
+        #Normalizing a Vector to set the diagonal direction to 1 instead of 2 which makes the diagonal speed the same as x and y (Length can only be 1)
+        if self.direction.magnitude() > 0: #Cannot normalize a vector that is zero so must check if its greater than zero
+            self.direction = self.direction.normalize()
+        
+        # Vertical movement
+        self.pos.y += self.direction.y * self.speed * dt
+        self.rect.centery = self.pos.y
+
+        # Horizontal movement
+        self.pos.x += self.direction.x * self.speed * dt
+        self.rect.centerx = self.pos.x
+
+    def update(self, dt):
+        self.rect.x += self.direction.x
+        posx = int(self.rect.x + self.direction.x)
+
+        if self.status == 'right':
+            frame = (posx//30) % len(self.animations['right'])
+            self.image = self.animations['right'][frame]
+        if self.status == 'left':
+            frame = (posx//30) % len(self.animations['left'])
+            self.image = self.animations['left'][frame]
+
+        self.rect.y += self.direction.y
+        posy = int(self.rect.y + self.direction.y)
+
+        if self.status == 'up':
+            frame = (posy//30) % len(self.animations['up'])
+            self.image = self.animations['up'][frame]
+
+        if self.status == 'down':
+            frame = (posy//30) % len(self.animations['down'])
+            self.image = self.animations['down'][frame]
+        
+        self.input()
+        self.move(dt)

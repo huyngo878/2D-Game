@@ -1,0 +1,140 @@
+{"frames": {
+
+"NPC 01_walk (16x24)-0.png":
+{
+	"frame": {"x":0,"y":0,"w":14,"h":17},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":7,"w":14,"h":17},
+	"sourceSize": {"w":16,"h":24}
+},
+"NPC 01_walk (16x24)-1.png":
+{
+	"frame": {"x":14,"y":0,"w":14,"h":16},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":8,"w":14,"h":16},
+	"sourceSize": {"w":16,"h":24}
+},
+"NPC 01_walk (16x24)-2.png":
+{
+	"frame": {"x":28,"y":0,"w":14,"h":17},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":7,"w":14,"h":17},
+	"sourceSize": {"w":16,"h":24}
+},
+"NPC 01_walk (16x24)-3.png":
+{
+	"frame": {"x":42,"y":0,"w":14,"h":16},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":8,"w":14,"h":16},
+	"sourceSize": {"w":16,"h":24}
+},
+"NPC 01_walk (16x24)-4.png":
+{
+	"frame": {"x":56,"y":0,"w":14,"h":17},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":7,"w":14,"h":17},
+	"sourceSize": {"w":16,"h":24}
+},
+"NPC 01_walk (16x24)-5.png":
+{
+	"frame": {"x":70,"y":0,"w":14,"h":16},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":8,"w":14,"h":16},
+	"sourceSize": {"w":16,"h":24}
+},
+"NPC 01_walk (16x24)-6.png":
+{
+	"frame": {"x":84,"y":0,"w":14,"h":17},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":7,"w":14,"h":17},
+	"sourceSize": {"w":16,"h":24}
+},
+"NPC 01_walk (16x24)-7.png":
+{
+	"frame": {"x":98,"y":0,"w":14,"h":16},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":8,"w":14,"h":16},
+	"sourceSize": {"w":16,"h":24}
+},
+"NPC 01_walk (16x24)-8.png":
+{
+	"frame": {"x":112,"y":0,"w":14,"h":17},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":7,"w":14,"h":17},
+	"sourceSize": {"w":16,"h":24}
+},
+"NPC 01_walk (16x24)-9.png":
+{
+	"frame": {"x":126,"y":0,"w":14,"h":16},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":8,"w":14,"h":16},
+	"sourceSize": {"w":16,"h":24}
+},
+"NPC 01_walk (16x24)-10.png":
+{
+	"frame": {"x":140,"y":0,"w":14,"h":17},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":7,"w":14,"h":17},
+	"sourceSize": {"w":16,"h":24}
+},
+"NPC 01_walk (16x24)-11.png":
+{
+	"frame": {"x":154,"y":0,"w":14,"h":16},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":8,"w":14,"h":16},
+	"sourceSize": {"w":16,"h":24}
+},
+"NPC 01_walk (16x24)-12.png":
+{
+	"frame": {"x":168,"y":0,"w":14,"h":17},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":7,"w":14,"h":17},
+	"sourceSize": {"w":16,"h":24}
+},
+"NPC 01_walk (16x24)-13.png":
+{
+	"frame": {"x":182,"y":0,"w":14,"h":16},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":8,"w":14,"h":16},
+	"sourceSize": {"w":16,"h":24}
+},
+"NPC 01_walk (16x24)-14.png":
+{
+	"frame": {"x":196,"y":0,"w":14,"h":17},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":7,"w":14,"h":17},
+	"sourceSize": {"w":16,"h":24}
+},
+"NPC 01_walk (16x24)-15.png":
+{
+	"frame": {"x":210,"y":0,"w":14,"h":16},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":8,"w":14,"h":16},
+	"sourceSize": {"w":16,"h":24}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "walkingss.png",
+	"format": "RGBA8888",
+	"size": {"w":224,"h":17},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:750e32081f4a0f3879bc2fc613761178:b1e517c61b558c085e53b89fa96305c5:1d109380d70b09918c751faf9eca9318$"
+}
+}

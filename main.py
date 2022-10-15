@@ -1,7 +1,9 @@
-import pygame, sys
+import pygame
+import sys
 from settings import *
 from level import Level
 from player import Player
+
 
 class Game:
     def __init__(self):
@@ -22,7 +24,7 @@ class Game:
             self.level.run(dt)
             pygame.display.update()
 
+
 if __name__ == '__main__':
     game = Game()
     game.run()
-

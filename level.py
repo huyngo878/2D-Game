@@ -2,6 +2,7 @@ import pygame
 from settings import *
 from player import Player
 
+
 class Level:
     def __init__(self):
 
@@ -14,7 +15,7 @@ class Level:
         self.setup()
 
     def setup(self):
-        self.player = Player((640, 360), self.all_sprites)
+        self.player = Player((300, 360), self.all_sprites)
 
     def run(self, dt):
         self.display_surface.fill('black')

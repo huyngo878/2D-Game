@@ -1,1 +1,1 @@
-pygame.display.flip()
+ pygame.display.update()

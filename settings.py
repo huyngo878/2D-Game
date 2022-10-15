@@ -1,26 +1,26 @@
 from pygame.math import Vector2
 
-#Screen Variables
+# Screen Variables
 SCREEN_WIDTH = 1200
 SCREEN_HEIGHT = 600
 TILE_SIZE = 16
 ALPHA = 0
+FPS = 60
 
-#OVERLAY POSITIONS
+
+# OVERLAY POSITIONS
 OVERLAY_POSITIONS = {
-        'tool' : (40, SCREEN_HEIGHT - 15),
-        'seed' : (70, SCREEN_HEIGHT - 5)}
+    'tool': (40, SCREEN_HEIGHT - 15),
+    'seed': (70, SCREEN_HEIGHT - 5)}
 
 PLAYER_TOOL_OFFSET = {
-        'left'  : Vector2(-50, 40),
-        'right' : Vector2(50, 40),
-        'up'    : Vector2(0, -10),
-        'down'  : Vector2(0, 50)
-        }
+    'left': Vector2(-50, 40),
+    'right': Vector2(50, 40),
+    'up': Vector2(0, -10),
+    'down': Vector2(0, 50)
+}
 
 LAYERS = {
-        'water'     : 0,
-        'ground'    : 1
-        }
-
-
+    'water': 0,
+    'ground': 1
+}

@@ -1,140 +1,140 @@
 {"frames": {
 
-"NPC 01_idle (16x24)-0.png":
+"Ogre 01_idle (32x32)-0.png":
 {
-	"frame": {"x":0,"y":0,"w":14,"h":17},
+	"frame": {"x":0,"y":0,"w":26,"h":24},
 	"rotated": false,
 	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":7,"w":14,"h":17},
-	"sourceSize": {"w":16,"h":24}
+	"spriteSourceSize": {"x":3,"y":8,"w":26,"h":24},
+	"sourceSize": {"w":32,"h":32}
 },
-"NPC 01_idle (16x24)-1.png":
+"Ogre 01_idle (32x32)-1.png":
 {
-	"frame": {"x":0,"y":0,"w":14,"h":17},
+	"frame": {"x":26,"y":0,"w":26,"h":24},
 	"rotated": false,
 	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":7,"w":14,"h":17},
-	"sourceSize": {"w":16,"h":24}
+	"spriteSourceSize": {"x":3,"y":8,"w":26,"h":24},
+	"sourceSize": {"w":32,"h":32}
 },
-"NPC 01_idle (16x24)-2.png":
+"Ogre 01_idle (32x32)-2.png":
 {
-	"frame": {"x":14,"y":0,"w":14,"h":16},
+	"frame": {"x":52,"y":0,"w":26,"h":23},
 	"rotated": false,
 	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":8,"w":14,"h":16},
-	"sourceSize": {"w":16,"h":24}
+	"spriteSourceSize": {"x":3,"y":9,"w":26,"h":23},
+	"sourceSize": {"w":32,"h":32}
 },
-"NPC 01_idle (16x24)-3.png":
+"Ogre 01_idle (32x32)-3.png":
 {
-	"frame": {"x":14,"y":0,"w":14,"h":16},
+	"frame": {"x":78,"y":0,"w":26,"h":23},
 	"rotated": false,
 	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":8,"w":14,"h":16},
-	"sourceSize": {"w":16,"h":24}
+	"spriteSourceSize": {"x":3,"y":9,"w":26,"h":23},
+	"sourceSize": {"w":32,"h":32}
 },
-"NPC 01_idle (16x24)-4.png":
+"Ogre 01_idle (32x32)-4.png":
 {
-	"frame": {"x":28,"y":0,"w":14,"h":17},
+	"frame": {"x":104,"y":0,"w":22,"h":24},
 	"rotated": false,
 	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":7,"w":14,"h":17},
-	"sourceSize": {"w":16,"h":24}
+	"spriteSourceSize": {"x":5,"y":8,"w":22,"h":24},
+	"sourceSize": {"w":32,"h":32}
 },
-"NPC 01_idle (16x24)-5.png":
+"Ogre 01_idle (32x32)-5.png":
 {
-	"frame": {"x":28,"y":0,"w":14,"h":17},
+	"frame": {"x":126,"y":0,"w":22,"h":24},
 	"rotated": false,
 	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":7,"w":14,"h":17},
-	"sourceSize": {"w":16,"h":24}
+	"spriteSourceSize": {"x":5,"y":8,"w":22,"h":24},
+	"sourceSize": {"w":32,"h":32}
 },
-"NPC 01_idle (16x24)-6.png":
+"Ogre 01_idle (32x32)-6.png":
 {
-	"frame": {"x":42,"y":0,"w":14,"h":16},
+	"frame": {"x":148,"y":0,"w":22,"h":23},
 	"rotated": false,
 	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":8,"w":14,"h":16},
-	"sourceSize": {"w":16,"h":24}
+	"spriteSourceSize": {"x":5,"y":9,"w":22,"h":23},
+	"sourceSize": {"w":32,"h":32}
 },
-"NPC 01_idle (16x24)-7.png":
+"Ogre 01_idle (32x32)-7.png":
 {
-	"frame": {"x":42,"y":0,"w":14,"h":16},
+	"frame": {"x":170,"y":0,"w":22,"h":23},
 	"rotated": false,
 	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":8,"w":14,"h":16},
-	"sourceSize": {"w":16,"h":24}
+	"spriteSourceSize": {"x":5,"y":9,"w":22,"h":23},
+	"sourceSize": {"w":32,"h":32}
 },
-"NPC 01_idle (16x24)-8.png":
+"Ogre 01_idle (32x32)-8.png":
 {
-	"frame": {"x":56,"y":0,"w":14,"h":17},
+	"frame": {"x":192,"y":0,"w":22,"h":24},
 	"rotated": false,
 	"trimmed": true,
-	"spriteSourceSize": {"x":2,"y":7,"w":14,"h":17},
-	"sourceSize": {"w":16,"h":24}
+	"spriteSourceSize": {"x":5,"y":8,"w":22,"h":24},
+	"sourceSize": {"w":32,"h":32}
 },
-"NPC 01_idle (16x24)-9.png":
+"Ogre 01_idle (32x32)-9.png":
 {
-	"frame": {"x":56,"y":0,"w":14,"h":17},
+	"frame": {"x":214,"y":0,"w":22,"h":24},
 	"rotated": false,
 	"trimmed": true,
-	"spriteSourceSize": {"x":2,"y":7,"w":14,"h":17},
-	"sourceSize": {"w":16,"h":24}
+	"spriteSourceSize": {"x":5,"y":8,"w":22,"h":24},
+	"sourceSize": {"w":32,"h":32}
 },
-"NPC 01_idle (16x24)-10.png":
+"Ogre 01_idle (32x32)-10.png":
 {
-	"frame": {"x":70,"y":0,"w":14,"h":16},
+	"frame": {"x":236,"y":0,"w":22,"h":23},
 	"rotated": false,
 	"trimmed": true,
-	"spriteSourceSize": {"x":2,"y":8,"w":14,"h":16},
-	"sourceSize": {"w":16,"h":24}
+	"spriteSourceSize": {"x":5,"y":9,"w":22,"h":23},
+	"sourceSize": {"w":32,"h":32}
 },
-"NPC 01_idle (16x24)-11.png":
+"Ogre 01_idle (32x32)-11.png":
 {
-	"frame": {"x":70,"y":0,"w":14,"h":16},
+	"frame": {"x":258,"y":0,"w":22,"h":23},
 	"rotated": false,
 	"trimmed": true,
-	"spriteSourceSize": {"x":2,"y":8,"w":14,"h":16},
-	"sourceSize": {"w":16,"h":24}
+	"spriteSourceSize": {"x":5,"y":9,"w":22,"h":23},
+	"sourceSize": {"w":32,"h":32}
 },
-"NPC 01_idle (16x24)-12.png":
+"Ogre 01_idle (32x32)-12.png":
 {
-	"frame": {"x":84,"y":0,"w":14,"h":17},
+	"frame": {"x":280,"y":0,"w":26,"h":24},
 	"rotated": false,
 	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":7,"w":14,"h":17},
-	"sourceSize": {"w":16,"h":24}
+	"spriteSourceSize": {"x":3,"y":8,"w":26,"h":24},
+	"sourceSize": {"w":32,"h":32}
 },
-"NPC 01_idle (16x24)-13.png":
+"Ogre 01_idle (32x32)-13.png":
 {
-	"frame": {"x":84,"y":0,"w":14,"h":17},
+	"frame": {"x":306,"y":0,"w":26,"h":24},
 	"rotated": false,
 	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":7,"w":14,"h":17},
-	"sourceSize": {"w":16,"h":24}
+	"spriteSourceSize": {"x":3,"y":8,"w":26,"h":24},
+	"sourceSize": {"w":32,"h":32}
 },
-"NPC 01_idle (16x24)-14.png":
+"Ogre 01_idle (32x32)-14.png":
 {
-	"frame": {"x":98,"y":0,"w":14,"h":16},
+	"frame": {"x":332,"y":0,"w":26,"h":23},
 	"rotated": false,
 	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":8,"w":14,"h":16},
-	"sourceSize": {"w":16,"h":24}
+	"spriteSourceSize": {"x":3,"y":9,"w":26,"h":23},
+	"sourceSize": {"w":32,"h":32}
 },
-"NPC 01_idle (16x24)-15.png":
+"Ogre 01_idle (32x32)-15.png":
 {
-	"frame": {"x":98,"y":0,"w":14,"h":16},
+	"frame": {"x":358,"y":0,"w":26,"h":23},
 	"rotated": false,
 	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":8,"w":14,"h":16},
-	"sourceSize": {"w":16,"h":24}
+	"spriteSourceSize": {"x":3,"y":9,"w":26,"h":23},
+	"sourceSize": {"w":32,"h":32}
 }},
 "meta": {
 	"app": "https://www.codeandweb.com/texturepacker",
 	"version": "1.0",
 	"image": "idless.png",
 	"format": "RGBA8888",
-	"size": {"w":112,"h":17},
+	"size": {"w":384,"h":24},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:999e726621431d33a2d52edb11efea84:50ac052fe9df7278562a8e3345dea077:c6550de5fe0031c657c6b2aaf36072b1$"
+	"smartupdate": "$TexturePacker:SmartUpdate:eb427abb96a14679e2f5dde8058cf429:1b0f43a98d29b66b18b327a50c6a3656:c6550de5fe0031c657c6b2aaf36072b1$"
 }
 }

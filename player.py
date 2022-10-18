@@ -21,56 +21,47 @@ class Player(pygame.sprite.Sprite):
 
         index = 0
         # adds down facing animation sprites
-        for x in range(4):
-            image = sprite_sheet.get_image(index, 0, 14, 16)
+        for x in range(3):
+            image = sprite_sheet.get_image(index, 0, 26, 24)
             self.animations['down'].append(image)
-            index = index + 14
+            index = index + 26
         # adds left facing animation sprites
         for x in range(4):
-            image = sprite_sheet.get_image(index, 0, 14, 16)
+            image = sprite_sheet.get_image(index, 0, 26, 24)
             self.animations['left'].append(image)
-            index = index + 14
+            index = index + 26
         # adds right facing animation sprites
         for x in range(4):
-            image = sprite_sheet.get_image(index, 0, 14, 16)
+            image = sprite_sheet.get_image(index, 0, 26, 24)
             self.animations['right'].append(image)
-            index = index + 14
+            index = index + 26
         # adds up facing animation sprites
-        for x in range(4):
-            image = sprite_sheet.get_image(index, 0, 14, 16)
+        for x in range(3):
+            image = sprite_sheet.get_image(index, 0, 26, 24)
             self.animations['up'].append(image)
-            index = index + 14
+            index = index + 26
 
         index2 = 0
         # adds downfacing idle animation
-        for x in range(2):
-            image = sprite_sheet_idle.get_image(index2, 0, 14, 16)
+        for x in range(4):
+            image = sprite_sheet_idle.get_image(index2, 0, 26, 26)
             self.animations['down_idle'].append(image)
-            image = sprite_sheet_idle.get_image(index2, 0, 14, 17)
-            self.animations['down_idle'].append(image)
-            index2 = index2 + 14
-
-        # adds leftfacing idle animation
-        for x in range(2):
-            image = sprite_sheet_idle.get_image(index2, 0, 14, 16)
+            index2 = index2 + 26
+         # adds leftfacing idle animation
+        for x in range(4):
+            image = sprite_sheet_idle.get_image(index2, 0, 22, 23)
             self.animations['left_idle'].append(image)
-            image = sprite_sheet_idle.get_image(index2, 0, 14, 17)
-            self.animations['left_idle'].append(image)
-            index2 = index2 + 14
+            index2 = index2 + 22
         # adds rightfacing idle animation
-        for x in range(2):
-            image = sprite_sheet_idle.get_image(index2, 0, 14, 16)
+        for x in range(4):
+            image = sprite_sheet_idle.get_image(index2, 0, 22, 26)
             self.animations['right_idle'].append(image)
-            image = sprite_sheet_idle.get_image(index2, 0, 14, 17)
-            self.animations['right_idle'].append(image)
-            index2 = index2 + 14
+            index2 = index2 + 22
         # adds upfacing idle animation
-        for x in range(2):
-            image = sprite_sheet_idle.get_image(index2, 0, 14, 16)
+        for x in range(4):
+            image = sprite_sheet_idle.get_image(index2, 0, 26, 26)
             self.animations['up_idle'].append(image)
-            image = sprite_sheet_idle.get_image(index2, 0, 14, 17)
-            self.animations['up_idle'].append(image)
-            index2 = index2 + 14
+            index2 = index2 + 26
 
         # Window Setup
         self.image = self.animations[self.status][self.frame_index]
@@ -80,7 +71,7 @@ class Player(pygame.sprite.Sprite):
         self.direction = pygame.math.Vector2()  # Default value for Vector2 is (0, 0)
         # Sets the position of the player to be the center
         self.pos = pygame.math.Vector2(self.rect.center)
-        self.speed = 200  # Speed of the Player
+        self.speed = 100  # Speed of the Player
 
     def input(self):
         keys = pygame.key.get_pressed()
@@ -129,6 +120,7 @@ class Player(pygame.sprite.Sprite):
         # uses status of character to change image of frames left and right
         self.rect.x += self.direction.x
         posx = int(self.rect.x + self.direction.x)
+
         if self.status == 'right' or self.status == 'left':
             frame = (posx//30) % len(self.animations[self.status])
             self.image = self.animations[self.status][frame]
@@ -136,6 +128,7 @@ class Player(pygame.sprite.Sprite):
         # uses status of character to change image of frames for up and down
         self.rect.y += self.direction.y
         posy = int(self.rect.y + self.direction.y)
+
         if self.status == 'up' or self.status == 'down':
             frame = (posy//30) % len(self.animations[self.status])
             self.image = self.animations[self.status][frame]
@@ -151,7 +144,7 @@ class Player(pygame.sprite.Sprite):
                 self.image = self.animations[self.status][self.nextframe]
                 self.standcount = 0
                 # one nextframe hits 3 which is the last index of the animations array set standcount back to 0 and frames back to 0
-                if self.nextframe == 3:
+                if self.nextframe >= 3:
                     self.nextframe = 0
 
         self.input()

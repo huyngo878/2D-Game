@@ -1,4 +1,5 @@
 from fileinput import filename
+import random
 import pyrebase
 
 ## Your web app's Firebase configuration
@@ -37,7 +38,11 @@ else:
     repeatpassword = input("Confirm your password: ")
     if password == repeatpassword:
         try:
-            auth.create_user_with_email_and_password(email.password)
+            ranID = (random.randint(1,1000) * 11)
+            
+            auth.create_user_with_email_and_password(email,password)
+            data = {'ID': ranID, 'email': email}
+            db.child("Players").child(ranID).set(data)
             print("Valid")
         except:
             print("Account already exist")

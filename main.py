@@ -1,9 +1,10 @@
+from sqlite3 import DatabaseError
 import pygame
 import sys
 from settings import *
 from level import Level
 from player import Player
-
+from database import loginScreen
 
 class Game:
     def __init__(self):
@@ -14,6 +15,7 @@ class Game:
         self.level = Level()
 
     def run(self):
+        loginScreen.login()
         while True:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:

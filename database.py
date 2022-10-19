@@ -22,30 +22,32 @@ auth = firebase.auth()
 storage = firebase.storage()
 
 #Authentication
-loginOrSignup = input("Do you have an account? (yes/no)")
-if loginOrSignup == "yes":
-    email = input("Enter your email: ")
-    password = input("Enter your password: ")
-    try:
-        auth.sign_in_with_email_and_password(email,password)
-        print("Logged in")
-    except:
-        print("Invalid Login")
-else:
+class loginScreen:
+    def login():
+        loginOrSignup = input("Do you have an account? (yes/no)")
+        if loginOrSignup == "yes":
+            email = input("Enter your email: ")
+            password = input("Enter your password: ")
+            try:
+                auth.sign_in_with_email_and_password(email,password)
+                print("Logged in")
+            except:
+                print("Invalid Login")
+        else:
 #Signup
-    email = input("Register your email: ")
-    password = input("Enter a password: ")
-    repeatpassword = input("Confirm your password: ")
-    if password == repeatpassword:
-        try:
-            ranID = (random.randint(1,1000) * 11)
+            email = input("Register your email: ")
+            password = input("Enter a password: ")
+            repeatpassword = input("Confirm your password: ")
+            if password == repeatpassword:
+                try:
+                    ranID = (random.randint(1,1000) * 11)
             
-            auth.create_user_with_email_and_password(email,password)
-            data = {'ID': ranID, 'email': email}
-            db.child("Players").child(ranID).set(data)
-            print("Valid")
-        except:
-            print("Account already exist")
+                    auth.create_user_with_email_and_password(email,password)
+                    data = {'ID': ranID, 'email': email}
+                    db.child("Players").child(ranID).set(data)
+                    print("Valid")
+                except:
+                    print("Account already exist")
 
 #put file storage
 #fileName = input("Enter the name of the file that you are uploading")

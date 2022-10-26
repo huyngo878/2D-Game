@@ -1,3 +1,4 @@
 # 2D-Game
-# unamed
-# testing
+## Make sure pygame is installed
+## Make sure pyrebase is installed
+## run main.py
